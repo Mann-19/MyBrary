@@ -5,11 +5,11 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block style 
             link(rel="stylesheet", href="style.css")
-        block title  
+        block title 
+            title MyBrary 
     body 
-        div  
-            |Before 
         div
+            block header 
+                include ./partials/headers.pug
+                include ./partials/errorMessage.pug
             block content 
-        div 
-            |After  
