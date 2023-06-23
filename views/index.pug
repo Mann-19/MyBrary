@@ -3,5 +3,7 @@ extends  layout.pug
 block title 
     title MyBrary  
 
-block content 
-    | Middle
+block content
+        h2 Recently Added 
+        each book in books  
+            img(src=book.coverImagePath height="150" width="100")
