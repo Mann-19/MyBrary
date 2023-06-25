@@ -1,0 +1,11 @@
+extends ../layout.pug
+
+block content 
+    h2= author.name
+    a(href="/authors/"+author.id+"/edit") Edit 
+    form(method="POST" action= "/authors/"+author.id+"?_method=DELETE")    
+        button(type="submit") Delete
+    -if(books != null)
+        h2 Books By Author 
+        each book in books    
+            img(src= book.coverImagePath height="150" width="100")   

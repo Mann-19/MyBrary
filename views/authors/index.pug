@@ -9,4 +9,8 @@ block content
     br
     each author in authors 
         div 
-            = author.name 
+            = author.name
+        a(href= "/authors/"+author.id) View   
+        a(href= "/authors/"+author.id+"/edit") Edit 
+        form(method="POST" action= "/authors/"+author.id+"?_method=DELETE")    
+            button(type="submit") Delete 

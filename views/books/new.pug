@@ -2,7 +2,8 @@ extends ../layout.pug
 
 block content 
     h2 New Books 
-    form(action="/books", method="POST" enctype="multipart/form-data")
+    //- enctype="multipart/form-data" add as a form attribute for a multipart form used to upload files when not using filepond [the upload is no longer a multipart file it would be a JSON string]
+    form(action="/books", method="POST")  
         include ./_form_fields.pug
         a(href="/books") Cancel 
         button(type="submit") Create  

@@ -5,6 +5,8 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block style 
             link(rel="stylesheet", href="style.css")
+            link(rel="stylesheet", href="https://unpkg.com/filepond/dist/filepond.css")
+            link(rel="stylesheet", href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css")
         block title 
             title MyBrary 
     body 
@@ -13,3 +15,9 @@ html(lang="en")
                 include ./partials/headers.pug
                 include ./partials/errorMessage.pug
             block content 
+        block scripts 
+            script(src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js") 
+            script(src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js") 
+            script(src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js") 
+            script(src="https://unpkg.com/filepond/dist/filepond.js")
+            script(src="/javascripts/fileUpload.js")
