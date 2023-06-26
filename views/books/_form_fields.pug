@@ -5,10 +5,11 @@ div
     label(for="author") Author 
     select(name="author")
         each author in authors 
-            - if(author.id === book.author)
-                option(value=author.id label=author.name selected=true) 
-            - else 
-                option(value=author.id label=author.name) 
+            option(value=author.id label=author.name selected=(author.id == book.author))
+            //- - if(author.id === book.author)
+            //-     option(value=author.id label=author.name selected= true) 
+            //- - else 
+            //-     option(value=author.id label=author.name) 
 div 
     label(for="publishDate") Publish Date 
     input(type="date" name="publishDate" value= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0])

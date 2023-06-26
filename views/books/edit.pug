@@ -1,0 +1,9 @@
+extends ../layout.pug 
+
+block content 
+    h2 Edit  Books 
+    //- enctype="multipart/form-data" add as a form attribute for a multipart form used to upload files when not using filepond [the upload is no longer a multipart file it would be a JSON string]
+    form(method="POST" action= "/books/"+book.id+"?_method=PUT")  
+        include ./_form_fields.pug
+        a(href="/books"+book.id) Cancel 
+        button(type="submit") Update   

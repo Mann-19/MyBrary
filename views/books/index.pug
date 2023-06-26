@@ -15,5 +15,6 @@ block content
         button(type="submit") Search 
     br
     each book in books  
-        img(src=book.coverImagePath height="150" width="100")
+        a(href="/books/"+book.id) 
+            img(src=book.coverImagePath height="150" width="100")
 
